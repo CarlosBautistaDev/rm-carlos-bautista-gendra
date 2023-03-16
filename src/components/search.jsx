@@ -1,9 +1,9 @@
-import { useLocation, useSearchParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+import {  useSearchParams } from "react-router-dom";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Card } from "./char";
 import { AllCharactersContainer } from "./styles";
-import { Alert, Button, Snackbar, styled } from "@mui/material";
+import { Alert, Button,  styled } from "@mui/material";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import { lightGreen, purple } from "@mui/material/colors";
@@ -26,7 +26,7 @@ export const Search = () => {
 
   useEffect(() => {
     dispatch(getSearchAction(param));
-  }, [param]);
+  }, [dispatch, param]);
 
   const ColorButton = styled(Button)(({ theme }) => ({
     color: theme.palette.getContrastText(purple[500]),

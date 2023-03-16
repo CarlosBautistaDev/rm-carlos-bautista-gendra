@@ -46,10 +46,6 @@ function App() {
                   enable: true,
                   mode: "bubble",
                 },
-                onHover: {
-                  enable: true,
-                  mode: "bubble",
-                },
               },
               modes: {
                 bubble: {
